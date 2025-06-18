@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import React, { useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const ExploreSection: React.FC = () => {
   const exploreRef = useRef<HTMLDivElement>(null);
@@ -47,50 +47,45 @@ const ExploreSection: React.FC = () => {
             </h3>
             <p className="text-gray-600 mb-6">
               Experience our campus from anywhere in the world with our
-              interactive virtual tour. Explore our classrooms, laboratories,
-              sports facilities, and more.
+              interactive virtual tour. Explore our classrooms, facilities, and
+              more.
             </p>
             <div className="space-y-4 mb-8">
-              <div className="flex items-center">
-                <div className="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                  <span>🧪</span>
+              {[
+                {
+                  icon: "🎥",
+                  text: "Smart Digital Classrooms with audio-visual tools",
+                },
+                {
+                  icon: "🏛️",
+                  text: "Multipurpose Auditorium for seminars and cultural events",
+                },
+                {
+                  icon: "🏏",
+                  text: "Sports Ground for cricket, volleyball, badminton, and athletics",
+                },
+                {
+                  icon: "🧸",
+                  text: "Dedicated Kids’ Play Area for pre-primary",
+                },
+                {
+                  icon: "📚",
+                  text: "Library with 5,000+ books and e-learning resources",
+                },
+                {
+                  icon: "🛡️",
+                  text: "Fully Secure Campus with CCTV, fire safety, and sanitation",
+                },
+              ].map(({ icon, text }, i) => (
+                <div key={i} className="flex items-center">
+                  <div className="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-4 text-xl">
+                    <span>{icon}</span>
+                  </div>
+                  <div>
+                    <p className="text-gray-800 font-medium">{text}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-gray-800 font-medium">
-                    State-of-the-art Science Labs
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <div className="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                  <span>💻</span>
-                </div>
-                <div>
-                  <p className="text-gray-800 font-medium">
-                    Advanced Technology Centers
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <div className="bg-purple-100 text-purple-600 rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                  <span>🎭</span>
-                </div>
-                <div>
-                  <p className="text-gray-800 font-medium">
-                    Performing Arts Complex
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <div className="bg-yellow-100 text-yellow-600 rounded-full w-10 h-10 flex items-center justify-center mr-4">
-                  <span>🏃</span>
-                </div>
-                <div>
-                  <p className="text-gray-800 font-medium">
-                    Olympic-sized Sports Facilities
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
               Start Virtual Tour
@@ -111,44 +106,44 @@ const ExploreSection: React.FC = () => {
                 Library & Resource Center
               </h3>
               <p className="text-gray-600">
-                Our modern library features over 50,000 books, digital
-                resources, and collaborative study spaces.
+                A vibrant knowledge hub with 5,000+ books, e-learning platforms,
+                and quiet zones for immersive study.
               </p>
             </div>
           </div>
           <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="h-48 overflow-hidden">
               <img
-                src="https://readdy.ai/api/search-image?query=high%20tech%20school%20science%20laboratory%20with%20students%20conducting%20experiments%2C%20modern%20equipment%2C%20interactive%20displays%2C%20STEM%20education%20with%20blue%20and%20green%20color%20theme&width=400&height=250&seq=16&orientation=landscape"
-                alt="Science Labs"
+                src="https://acoustima.com/wp-content/uploads/2019/04/Multi-purpose-hall-seatupturkey2.png"
+                alt="Auditorium"
                 className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-2">
-                Science & Innovation Labs
+                Multipurpose Auditorium
               </h3>
               <p className="text-gray-600">
-                Specialized laboratories for physics, chemistry, biology,
-                robotics, and engineering projects.
+                A fully equipped space for seminars, events, performances, and
+                community gatherings.
               </p>
             </div>
           </div>
           <div className="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="h-48 overflow-hidden">
               <img
-                src="https://readdy.ai/api/search-image?query=modern%20school%20sports%20complex%20with%20indoor%20courts%2C%20swimming%20pool%2C%20fitness%20center%2C%20students%20engaged%20in%20athletic%20activities%20with%20blue%20and%20green%20design%20elements&width=400&height=250&seq=17&orientation=landscape"
-                alt="Sports Complex"
+                src="https://news.beta80group.it/hubfs/Imported_Blog_Media/safety%20and%20security%20difference-4.jpg"
+                alt="Secure Campus"
                 className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-2">
-                Sports & Recreation Complex
+                Security & Safety
               </h3>
               <p className="text-gray-600">
-                World-class facilities including indoor and outdoor courts,
-                swimming pool, and fitness center.
+                Our campus ensures complete safety with CCTV monitoring, fire
+                safety systems, and hygiene protocols.
               </p>
             </div>
           </div>

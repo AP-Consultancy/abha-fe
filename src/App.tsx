@@ -1,15 +1,23 @@
-import React, { useEffect } from 'react';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import AdmissionSection from './components/AdmissionSection';
-import VisionSection from './components/VisionSection';
-import AchievementsSection from './components/AchievementsSection';
-import ExploreSection from './components/ExploreSection';
-import AssociationsSection from './components/AssociationsSection';
-import WhyChooseUsSection from './components/WhyChooseUsSection';
-import HowToApplySection from './components/HowToApplySection';
-import Footer from './components/Footer';
+import React, { useEffect } from "react";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
+import AdmissionSection from "./components/AdmissionSection";
+import VisionSection from "./components/VisionSection";
+import AchievementsSection from "./components/AchievementsSection";
+import ExploreSection from "./components/ExploreSection";
+import AssociationsSection from "./components/AssociationsSection";
+import WhyChooseUsSection from "./components/WhyChooseUsSection";
+import HowToApplySection from "./components/HowToApplySection";
+import Footer from "./components/Footer";
+import CoreValues from "./components/CoreValues";
+import LeadershipMessage from "./components/LeadershipMessage";
+import AcademicCurriculum from "./components/AcademicProcess";
+import SpecialPrograms from "./components/SpecialPrograms";
+import CoCurricularClubs from "./components/CoCurricularClubs";
+import TestimonialsSection from "./components/TestimonialsSection";
+import ParentSupportAndContact from "./components/ParentSupportAndContact";
+import FollowUsSection from "./components/FollowUsSection";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -22,14 +30,15 @@ const App: React.FC = () => {
     };
 
     addAnimation();
-    
+
     // Update document title
     document.title = "Aabha Vidya Niketan - Excellence in Education";
-    
+
     // Update favicon if needed
     const link = document.querySelector("link[rel='icon']") as HTMLLinkElement;
     if (link) {
-      link.href = "https://static.readdy.ai/image/953bd119c83c8d2bfefb1444f876a614/7aa7c763b03c6207e9bbc7154388f1fe.jpeg";
+      link.href =
+        "https://static.readdy.ai/image/953bd119c83c8d2bfefb1444f876a614/7aa7c763b03c6207e9bbc7154388f1fe.jpeg";
     }
   }, []);
 
@@ -40,11 +49,19 @@ const App: React.FC = () => {
       <AboutSection />
       <AdmissionSection />
       <VisionSection />
+      <CoreValues />
+      <LeadershipMessage />
+      <AcademicCurriculum />
+      <SpecialPrograms />
+      <CoCurricularClubs />
       <AchievementsSection />
       <ExploreSection />
+      <TestimonialsSection />
       <AssociationsSection />
       <WhyChooseUsSection />
       <HowToApplySection />
+      <ParentSupportAndContact />
+      <FollowUsSection />
       <Footer />
     </div>
   );

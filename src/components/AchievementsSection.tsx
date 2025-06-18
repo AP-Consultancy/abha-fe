@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
-import * as echarts from 'echarts';
+import React, { useRef, useEffect } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import * as echarts from "echarts";
 
 const AchievementsSection: React.FC = () => {
   const achievementsRef = useRef<HTMLDivElement>(null);
@@ -68,7 +68,7 @@ const AchievementsSection: React.FC = () => {
       window.addEventListener("resize", () => {
         achievementsChart.resize();
       });
-      
+
       return () => {
         achievementsChart.dispose();
         window.removeEventListener("resize", () => {
@@ -104,51 +104,51 @@ const AchievementsSection: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
               Recent Accolades
             </h3>
-            <div
-              ref={achievementsChartRef}
-              className="w-full h-80 mb-8"
-            ></div>
+            <div ref={achievementsChartRef} className="w-full h-80 mb-8"></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="text-blue-600 mb-3">
-                  <span className="text-3xl">🏆</span>
+                  <span className="text-3xl">📘</span>
                 </div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                  Best STEM Program
+                  Stellar Board Results
                 </h4>
                 <p className="text-gray-600">
-                  National Education Excellence Awards, 2024
+                  100% Board Results with merit scholars every year
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="text-green-600 mb-3">
-                  <span className="text-3xl">🏅</span>
+                  <span className="text-3xl">🔬</span>
                 </div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                  Innovation in Education
+                  Science & Quiz Excellence
                 </h4>
-                <p className="text-gray-600">Global Education Summit, 2023</p>
+                <p className="text-gray-600">
+                  State-level winners in Science Fair & Quiz Competitions
+                </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="text-purple-600 mb-3">
-                  <span className="text-3xl">🏆</span>
+                  <span className="text-3xl">🏏</span>
                 </div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                  Sports Excellence
+                  National Sports Achievers
                 </h4>
                 <p className="text-gray-600">
-                  Regional Sports Federation, 2024
+                  National champions in Cricket and Karate
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="text-yellow-600 mb-3">
-                  <span className="text-3xl">⭐</span>
+                  <span className="text-3xl">🎓</span>
                 </div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                  Sustainability Champion
+                  Alumni Success Stories
                 </h4>
                 <p className="text-gray-600">
-                  Green Schools Initiative, 2023
+                  Alumni placed in IITs, Medical Colleges, Armed Forces & Civil
+                  Services
                 </p>
               </div>
             </div>
